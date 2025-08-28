@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Other elements -->
+    <receiver
+        android:name=".MyDeviceAdminReceiver"
+        android:permission="android.permission.BIND_DEVICE_ADMIN"
+        android:exported="true"> <!-- Set to true since it’s a device admin receiver -->
+        <meta-data
+            android:name="android.app.device_admin"
+            android:resourceName="@xml/device_admin" />
+        <intent-filter>
+            <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+        </intent-filter>
+    </receiver>
+    <!-- Other elements -->
+</manifest>

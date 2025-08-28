@@ -1,0 +1,5 @@
+<device-admin>
+    <uses-policies>
+        <wipe-data />
+    </uses-policies>
+</device-admin>

@@ -1,0 +1,8 @@
+R_DEF: Internal format may change without notice
+local
+id widget_button
+layout activity_main
+layout widget_layout
+string app_name
+xml device_admin
+xml widget_info

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.example.smswipe.app-merged_res-23:/xml_widget_info.xml.flat",
+        "source": "com.example.smswipe.app-main-24:/xml/widget_info.xml"
+    },
+    {
+        "merged": "com.example.smswipe.app-merged_res-23:/layout_activity_main.xml.flat",
+        "source": "com.example.smswipe.app-main-24:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.smswipe.app-merged_res-23:/xml_device_admin.xml.flat",
+        "source": "com.example.smswipe.app-main-24:/xml/device_admin.xml"
+    },
+    {
+        "merged": "com.example.smswipe.app-merged_res-23:/layout_widget_layout.xml.flat",
+        "source": "com.example.smswipe.app-main-24:/layout/widget_layout.xml"
+    }
+]

@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.0' // Updated to 8.2.0 for API 34 support
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0' // Kotlin Plugin
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    namespace "com.example.smswipe"
+    compileSdkVersion 34 // Updated to 34
+    defaultConfig {
+        applicationId "com.example.smswipe"
+        minSdk 21
+        targetSdk 33 // Optionally update to 34 later
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.0' // Updated to match API 34
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.0'
+}
