@@ -8,8 +8,7 @@ workflows:
       branch_patterns:
         - pattern: master
           include: true
-    environment:
-      ndk: none  # Only valid field under environment
+    environment: {}  # Empty environment to use defaults
     cache: {}  # Disable caching to avoid corrupted files
     scripts:
       - name: Stop Gradle Daemons
