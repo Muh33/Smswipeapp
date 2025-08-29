@@ -1,16 +1,27 @@
 workflows:
   android-workflow:
-    name: Android Build
-    max_build_duration: 60
+    name: Android Debug Build
+    max_build_duration: 120
     triggering:
       events:
         - push
       branch_patterns:
-        - pattern: master  # or 'main' if that's your default branch
+        - pattern: master
           include: true
+    environment:
+      android_sdk: latest
+      ndk: none
+      java_version: 17
+    cache: {}  # Disable caching to avoid reusing corrupted files
     scripts:
-      - name: Build Android APK
+      - name: Stop Gradle Daemons
         script: |
-          ./gradlew build
+          ./gradlew --stop
+      - name: Clean Build
+        script: |
+          ./gradlew clean
+      - name: Build Debug APK
+        script: |
+          ./gradlew assembleDebug
     artifacts:
-      - app/build/outputs/apk/**/*.apk
+      - app/build/outputs/apk/debug/*.apk
