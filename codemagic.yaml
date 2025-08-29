@@ -2,6 +2,12 @@ workflows:
   android-workflow:
     name: Android Build
     max_build_duration: 60
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: master  # or 'main' if that's your default branch
+          include: true
     scripts:
       - name: Build Android APK
         script: |
