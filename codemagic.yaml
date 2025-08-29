@@ -9,10 +9,8 @@ workflows:
         - pattern: master
           include: true
     environment:
-      android_sdk: latest
-      ndk: none
-      java_version: 17
-    cache: {}  # Disable caching to avoid reusing corrupted files
+      ndk: none  # Only valid field under environment
+    cache: {}  # Disable caching to avoid corrupted files
     scripts:
       - name: Stop Gradle Daemons
         script: |
