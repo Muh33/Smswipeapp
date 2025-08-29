@@ -3,7 +3,7 @@ workflows:
     name: Android Build
     max_build_duration: 60
     environment:
-      android_sdk: default
+      android_sdk_version: 34  # Valid key-value pair
     scripts:
       - name: Build Android APK
         script: |
